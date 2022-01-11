@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Globalization;
 
 namespace ConsultaFuncionario.Entities
 {
@@ -14,7 +12,16 @@ namespace ConsultaFuncionario.Entities
         {
             Name = name;
             Email = email;
-            Salary = salary;
+            Salary = salary;            
+        }
+
+        public override string ToString()
+        {
+            return Name 
+                + ", " 
+                + Email
+                +", "
+                + Salary.ToString("F2", CultureInfo.InvariantCulture);                
         }
     }
 }
